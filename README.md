@@ -23,3 +23,124 @@
 - Tham trị, tham chiếu:
     + Tham trị: khi tạo ra một biến, 1 ô nhớ được tạo ra và ta có thể truy cập vào dữ liệu trong ô nhớ đó thông qua "địa chỉ - tên biến", có thể ghi đè
     + Tham chiếu: khi tạo ra một biến, 1 địa chi ô nhớ được tạo ra và "địa chỉ - tên biến" đó trỏ tới giá trị của biến, khi gán giá trị mới cho biến sẽ copy lại 1 địa chỉ ô nhớ mới và không làm ảnh hưởng tới giá trị được tạo trước đó
+
+=======================================================================================================================================
+                                                            Training
+=======================================================================================================================================
+- Nhập xuất:
+    + Console.Write();
+    + Console.WriteLine();
+    + Console.Read(); đọc 1 kí tự từ bán phím sau đó in ra kí tự vừa đọc
+    + Console.ReadKey(); if false: ko xuất input ra màn hình, elif true: xuất input ra màn hình, else không truyền tham số mặc định là false (có thể dùng khi muốn mất đi dòng chữ press any key to continue)
+    + Console.ReadLine(); đọc dữ liệu input (có thể dùng khi muốn mất đi dòng chữ press any key to continue)
+- Biến trong C#:
+    + Khi tạo ra một biến, biến đó được tham chiếu đến 1 địa chỉ ô nhớ trong vùng nhớ thay vì dùng "địa chỉ" của ô nhớ đó
+- Hằng (like const)
+    Ex: const int x = 10;
+- Object trong C#:
+    + objName.Equals: So sánh 2 đối tượng có bằng nhau k, return bool
+    + objName.GetHashCode: Trả về mã của đối tượng 
+    + objName.GetType 
+    + objName.ToString 
+    + Boxing: chuyển từ kiểu dữ liệu giá trị sang kiểu dữ liệu tham chiếu
+        Ex: int value = 10; object objectValue = value;
+        objectValue tham chiếu tới giá trị value
+    + Unboxing:
+        Ex: int newValue = (int)objectValue;
+- Kiểu dữ liệu dynamic:
+    + Kiểu dữ liệu dynamic không được xác định cho đến khi chương trình chạy
+- Cấu trúc lặp "goto":
+        Ex: goto MyHome (tạo biến dịch chuyển code); console.Write('Your Home'); MyHome  (điểm dịch chuyển code); console.Write('MyHome'); =>>>>>>>> result = MyHome
+        ====================================================
+        int a = 2;
+        switch(a)
+        {
+            case 1: 
+                Console.Write("case 1");
+                break;
+            case 2:
+                Console.Write("case 2");
+                goto case 1;
+                <!-- break; -->
+            ...
+        }
+        result = case 2case 1
+        ====================================================
+        firstPoint:
+        goto secondPoint;
+        secondPoint:
+        goto firstPoint;
+- Biến toàn cục và biến cục bộ:
+        Ex: 
+        class Program
+        {
+            static int value = 5;
+            static void Main(string[] args)
+            {
+                Console.WriteLine(value);
+                PrintSomeThing();
+                Console.ReadLine();
+            }
+            static void PrintSomeThing()
+            {
+                int value = 9; (biến cục bộ)
+                Console.WriteLine(value);
+            }
+        }
+        * value là biến toàn cục của hàm Main và hàm PrintSomeThing
+        * value là biến cục bộ của class Program 
+- Từ khóa ref và out:
+        ref Ex:
+        class Program
+        {
+            static void Main(string[] args) 
+            {
+                int value = 5;
+                Console.WriteLine("Value before increase: {0}");
+                IncreaseValue(ref value);
+                Console.WriteLine("Value after increase: {0}");
+                Console.ReadLine();
+            }
+            static void IncreaseValue(ref int value)
+            {
+                value++;
+            }
+        }
+        out Ex:
+        class Program
+        {
+            static void Main(string[] args)
+            {
+                int value = 5;
+                Console.WriteLine("Value before increase: {0}");
+                IncreaseValue(out value);
+                Console.WriteLine("Value after increase: {0}");
+                Console.ReadLine();
+            }
+            static void IncreaseValue(out int value)
+            {
+                value++;
+            }
+        }
+- Phạm vi truy cập:
+    Public: Có thể truy cập từ toàn bộ các file
+    Private: (Mặc định) Chỉ Truy cập trong phạm vi của biến được khai báo
+
+- Array List:
+    + ToString()
+    + Count()
+    + Add()
+    + AddRange()
+    + Clone()
+    + Clear()
+    + Contains
+    + BinarySearch() !
+- Hashtable:
+- SortedList:
+- Stack:
+- Queue:
+- Generic:
+- List:
+- Dictionary:
+- Tuple: 
+=======================================================================================================================================
