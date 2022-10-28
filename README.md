@@ -24,6 +24,8 @@
     + Tham trị: khi tạo ra một biến, 1 ô nhớ được tạo ra và ta có thể truy cập vào dữ liệu trong ô nhớ đó thông qua "địa chỉ - tên biến", có thể ghi đè
     + Tham chiếu: khi tạo ra một biến, 1 địa chi ô nhớ được tạo ra và "địa chỉ - tên biến" đó trỏ tới giá trị của biến, khi gán giá trị mới cho biến sẽ copy lại 1 địa chỉ ô nhớ mới và không làm ảnh hưởng tới giá trị được tạo trước đó
 
+# Lesson 2 (October 28, 2022), 7h10-9h10
+
 =======================================================================================================================================
                                                             Training
 =======================================================================================================================================
@@ -125,7 +127,57 @@
 - Phạm vi truy cập:
     Public: Có thể truy cập từ toàn bộ các file
     Private: (Mặc định) Chỉ Truy cập trong phạm vi của biến được khai báo
+- Mảng một chiều:
+    Ex:
+        Khai báo mảng một chiều kiểu string có tên là KTeam:
 
+    string[] Kteam = new string[] { "HowKteam", "Free Education" };
+
+    int[] IntArray = { 3, 9, 10 };
+
+    Console.WriteLine(Kteam[1]);
+    Ex2: 
+    int Year;
+    string[] Can = {"Canh", "Tan", "Nham", "Quy", "Giap", "At", "Binh", "Dinh", "Mau", "Ky"};
+    string[] Chi = {"Than", "Dau", "Tuat", "Hoi", "Ty", "Suu", "Dan", "Mao", "Thin", "Ty", "Ngo", "Mui"};
+    Console.Write("Moi ban nhap mot nam bat ky: ");
+    Year = Int32.Parse(Console.ReadLine());
+    Console.WriteLine("Nam {0} co nam am lich la: {1} {2}", Year, Can[Year % 10], Chi[Year % 12])
+- Mảng 2 chiều: 
+    Ex: khai báo mảng hai chiều Array, truy xuất = Array[0, 3]; trong đó 2 là chỉ số của các array và 3 là chỉ số của phần tử trong mảng 
+    string[,] Array = {
+        {1, 2, 3, 4, 5, 6},
+        {7, 8, 9, 10, 11, 12},
+        ...
+    }
+    Array.Rank trả về số chiều của mảng
+- Mảng đa chiều:
+    Ex:
+    int[,,] intArray;
+    double[,,] dArray = new double[6, 9, 10];
+    float[,,] fArray = new float[,,]
+        {
+            {
+                {1, 2, 3, 4},
+                {5, 6, 7, 8}
+            },
+            {
+                {9, 10, 11, 12},
+                {13, 14, 15, 16}
+            }
+        }
+- Mảng ziczac:
+    Ex: 
+    int[][] intArray;
+    double[][] dArray = new double[6][];
+    dArray[0] = new double[9];
+    dArray[1] = new double[10];
+
+    float[][] fArray =
+    {
+        new float[] {1, 2, 3},
+        new float[] {4, 5, 6, 7, 8, 9}
+    }
 - Array List:
     + ToString()
     + Count()
@@ -135,12 +187,12 @@
     + Clear()
     + Contains
     + BinarySearch() !
-- Hashtable:
+<!-- - Hashtable:
 - SortedList:
 - Stack:
 - Queue:
 - Generic:
 - List:
 - Dictionary:
-- Tuple: 
+- Tuple:  -->
 =======================================================================================================================================
