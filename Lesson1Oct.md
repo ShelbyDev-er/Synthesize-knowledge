@@ -24,7 +24,6 @@
     + Tham trị: khi tạo ra một biến, 1 ô nhớ được tạo ra và ta có thể truy cập vào dữ liệu trong ô nhớ đó thông qua "địa chỉ - tên biến", có thể ghi đè
     + Tham chiếu: khi tạo ra một biến, 1 địa chi ô nhớ được tạo ra và "địa chỉ - tên biến" đó trỏ tới giá trị của biến, khi gán giá trị mới cho biến sẽ copy lại 1 địa chỉ ô nhớ mới và không làm ảnh hưởng tới giá trị được tạo trước đó
 
-# Lesson 2 (October 28, 2022), 7h10-9h10
 
 =======================================================================================================================================
                                                             Training
