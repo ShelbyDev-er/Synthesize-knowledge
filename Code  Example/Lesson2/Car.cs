@@ -6,7 +6,20 @@ using System.Threading.Tasks;
 
 namespace Lesson2
 {
-	public class Vehicle
+	// Be able: what can do?
+	public interface ICar
+	{
+		public void OpenMusic();
+		public void OpenTrunk();
+	}
+
+	public interface ICarAssistant
+	{
+		public void AutoBrake();
+	}
+
+	// Is a
+	public abstract class Vehicle
 	{
 		// Attribute
 		private int height;
@@ -59,14 +72,52 @@ namespace Lesson2
 		{
 			return this.height;
 		}
+
+		public abstract void StartEngine();
+
+		public virtual void FillFuel()
+		{
+			//Open nap xang
+			TestMethod();
+		}
+
+		protected void TestMethod()
+		{
+
+		}
 	}
 
-	public class Car : Vehicle
+	public class Car : Vehicle, ICar, ICarAssistant
 	{
 		// Constructor
 		public Car(string carName) : base(carName)
 		{
 			Console.WriteLine($"Car is created !!!");
+		}
+
+		public override void StartEngine()
+		{
+			//Code
+		}
+
+		public override void FillFuel()
+		{
+
+		}
+
+		public void OpenMusic()
+		{
+			throw new NotImplementedException();
+		}
+
+		public void OpenTrunk()
+		{
+			throw new NotImplementedException();
+		}
+
+		public void AutoBrake()
+		{
+			throw new NotImplementedException();
 		}
 	}
 
@@ -75,6 +126,25 @@ namespace Lesson2
 		// Constructor
 		public Motobike(string motobikeName) : base(motobikeName)
 		{
+		}
+
+		public override void StartEngine()
+		{
+			//Code
+			FillFuel();
+		}
+	}
+
+	public static class MathTool
+	{
+		public static int SumOf2Num(int a, int b)
+		{
+			return a + b;
+		}
+
+		public static int SumOf3Num(int a, int b)
+		{
+			return a + b;
 		}
 	}
 }

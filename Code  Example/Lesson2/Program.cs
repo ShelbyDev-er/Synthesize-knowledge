@@ -30,6 +30,11 @@ namespace Lesson2
 			// Tinh da hinh (Polymorphism)
 
 			// Tinh truu tuong (Abstraction)
+			/*
+				- Abstract class
+				- Interface
+			 */
+
 
 			// Override(ghi de) vs Overloading(nap chong ham)
 
@@ -46,6 +51,8 @@ namespace Lesson2
 			car1.SetHeight(1);
 			car1.SetHeight((decimal)10.5);
 			car1.SetHeight(5, 6);
+
+			var res = MathTool.SumOf2Num(1, 2);
 		}
 	}
 }
