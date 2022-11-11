@@ -13,6 +13,9 @@ namespace CRUD
 	{
 		public static void Main(string[] args)
 		{
+			//RecusiveAlgorithm runner = new RecusiveAlgorithm();
+			//runner.Entry();
+
 			CreateHostBuilder(args).Build().Run();
 		}
 
