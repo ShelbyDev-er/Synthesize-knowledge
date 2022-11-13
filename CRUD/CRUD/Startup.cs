@@ -1,3 +1,5 @@
+using Application.Interfaces;
+using Application.Services;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.HttpsPolicy;
@@ -32,6 +34,11 @@ namespace CRUD
 			{
 				c.SwaggerDoc("v1", new OpenApiInfo { Title = "CRUD", Version = "v1" });
 			});
+
+			//Dependency Inject (DI)
+			services.AddTransient<IPodService, PodService>();
+			//services.AddScoped<IPodService, PodService>();
+			//services.AddSingleton<IPodService, PodService>();
 		}
 
 		// This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

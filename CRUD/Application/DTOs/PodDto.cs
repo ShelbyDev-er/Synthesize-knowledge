@@ -14,6 +14,12 @@ namespace Application.DTOs
 
 	public class PodResponseDto : PodRequestDto
 	{
+		public PodResponseDto()
+		{
+
+		}
+
 		public int Id { get; set; }
+
 	}
 }

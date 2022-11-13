@@ -16,21 +16,23 @@ namespace Application.Services
 			new PodModel
 			{
 				Id = 1,
-				Name = "rodeo",
-				Price = 200
+				Name = "rodeoOOOO",
+				Price = 200,
+				IsDeleted = false
 			},
 			new PodModel
 			{
 				Id = 2,
 				Name = "fizzy",
-				Price = 250
+				Price = 250,
+				IsDeleted = false
 			},
 			new PodModel
 			{
 				Id = 3,
 				Name = "biffbar",
 				Price = 3000,
-				IsDeleted = false
+				IsDeleted = true
 			}
 		};
 
@@ -41,7 +43,22 @@ namespace Application.Services
 
 		public List<PodResponseDto> GetAll()
 		{
-			throw new NotImplementedException();
+
+			var result = new List<PodResponseDto>();
+
+			// Mapping from class PodModel -> PodResponseDto
+			foreach (var pod in podTypes)
+			{
+				var podResponse = new PodResponseDto()
+				{
+					Id = pod.Id,
+					Name = pod.Name,
+					Price = pod.Price
+				};
+				result.Add(podResponse);
+			}
+
+			return result;	
 		}
 
 		public PodResponseDto GetDetails(int id)
@@ -74,7 +91,7 @@ namespace Application.Services
 
 		public void UpdatePod(PodRequestDto data)
 		{
-			thr
 
+		}
 	}
 }

@@ -1,5 +1,6 @@
 using Application.DTOs;
 using Application.Interfaces;
+using Application.Services;
 using Microsoft.AspNetCore.Mvc;
 using System.Collections.Generic;
 
@@ -16,65 +17,67 @@ namespace CRUD_training_be.Controllers
 			_podService = podService;
 		}
 
-        [HttpGet]
+		[HttpGet]
         [Route("")]
         public List<PodResponseDto> GetPodList()
 		{
 			return _podService.GetAll();
         }
-       
-		  //      [HttpGet]
-		  //      [Route("detail/{id}")]
-		  //      public Pod GetPodDetail(int id)
-		  //      {
-		  //          Pod selectedPod = null;
 
-		  //          foreach(var pod in podTypes)
-				//	{
-		  //              if (pod.Id == id)
-		  //              {
-		  //                  selectedPod = pod;
-		  //                  break;
-		  //              }
-				//	}
+		//      [HttpGet]
+		//      [Route("detail/{id}")]
+		//      public Pod GetPodDetail(int id)
+		//      {
+		//          Pod selectedPod = null;
 
-		  //          return selectedPod;
-		  //      }
+		//          foreach(var pod in podTypes)
+		//	{
+		//              if (pod.Id == id)
+		//              {
+		//                  selectedPod = pod;
+		//                  break;
+		//              }
+		//	}
 
-		  //      [HttpPost]
-		  //      [Route("")]
-		  //      public Pod PostPodName(Pod data)
-		  //      {
-		  //          data.Id = podTypes.Count + 1;
-		  //          podTypes.Add(data);
-            
-		  //          return podTypes[podTypes.Count - 1];
-		  //      }
+		//          return selectedPod;
+		//      }
 
-				//[HttpPut]
-				//[Route("{id}")]
-				//public IActionResult UpdatePod(int id, [FromBody] Pod data)
-				//{
-				//	for(var i = 0; i < podTypes.Count; i++)
-				//	{
-		  //              if (podTypes[i].Id == id)
-				//		{
-		  //                  podTypes[i] = data;
-		  //                  break;
-		  //              }
-				//	}
+		//      [HttpPost]
+		//      [Route("")]
+		//      public Pod PostPodName(Pod data)
+		//      {
+		//          data.Id = podTypes.Count + 1;
+		//          podTypes.Add(data);
 
-				//	return NoContent();
-				//}
+		//          return podTypes[podTypes.Count - 1];
+		//      }
 
-				//[HttpDelete]
-				//[Route("delete/pod/{id}")]
-				//public List<Pod> Delete(int id)
-				//{
+		//[HttpPut]
+		//[Route("{id}")]
+		//public IActionResult UpdatePod(int id, [FromBody] Pod data)
+		//{
+		//	for(var i = 0; i < podTypes.Count; i++)
+		//	{
+		//              if (podTypes[i].Id == id)
+		//		{
+		//                  podTypes[i] = data;
+		//                  break;
+		//              }
+		//	}
 
-		  //          // Soft delete vs hard delete
-		  //          return podTypes;
-			
-				//}
+		//	return NoContent();
+		//}
+
+		//[HttpDelete]
+		//[Route("delete/pod/{id}")]
+		//public List<Pod> Delete(int id)
+		//{
+
+		//          // Soft delete vs hard delete
+		//          return podTypes;
+
+		//}
 	}
+
+
 }
