@@ -5,7 +5,7 @@ using System.Threading.Tasks;
 
 namespace Presentation
 {
-	public class changed
+	class changed
 	{
 	}
 }
