@@ -5,7 +5,7 @@ using System.Threading.Tasks;
 
 namespace Presentation
 {
-	public class Testing_Git
+	public class Updated
 	{
 	}
 }
