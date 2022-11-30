@@ -11,5 +11,8 @@ namespace Infrastructure.DataModels
 		public int PodId { get; set; }
 		public string Name { get; set; }
 		public int Price { get; set; }
+		public int PodCategoryId { get; set; }
+
+		public PodCategoryDataModel PodCategory { get; set; }
 	}
 }

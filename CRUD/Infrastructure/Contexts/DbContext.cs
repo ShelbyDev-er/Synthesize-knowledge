@@ -6,10 +6,12 @@ namespace Infrastructure.Contexts
     public class PodStoreContext : DbContext
     {
         public DbSet<PodDataModel> Pods { get; set; }
+        public DbSet<PodCategoryDataModel> PodCategories { get; set; }
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
-            optionsBuilder.UseSqlServer(@"Server=.\SQLEXPRESS;Database=SchoolDB;Trusted_Connection=True;");
+            // Connection string
+            optionsBuilder.UseSqlServer(@"Server=.\SQLEXPRESS;Database=SQL Tutorial;Trusted_Connection=True;"); 
         }
     }
 }
